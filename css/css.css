@@ -1,0 +1,210 @@
+*{
+	padding: 0em;
+	margin: 0em;
+}
+/*-------------------------------*/
+/*     Header Footer Section     */
+/*-------------------------------*/
+
+header, section, footer{
+	display: block;
+}
+
+header{
+	height: 9em;
+	background: -webkit-linear-gradient(65deg, #affff0, #d6acf1);
+	text-align: center;
+	overflow: hidden;
+	border-bottom: .5em solid #272727;
+}
+.logo_img{
+	/border: 1px solid red;
+	position: relative;
+}
+#lessthan{
+	top: -2em;
+	left: 3em;
+	animation: lessthan 2s ease-in-out;
+}
+#slash{
+	left: .5em;
+	top: -0.5em;
+}
+#code{
+	width: 16em;
+	top: -3em;
+	left: -1.5em;
+	animation: code 1.3s ease-in-out;
+	transform-origin : 0% 0%;
+}
+#share{
+	width: 20em;
+	top: -3em;
+	left: -1.5em;
+	animation: share 1s ease-in-out;
+	transform-origin : 100% 100%;
+}
+#greaterthan{
+	top: -2em;
+	left: -2.5em;
+	animation: greaterthan 1.5s ease-in-out;
+}
+body
+{
+	background: -webkit-linear-gradient(45deg, #ffffff, #868686);
+}
+/*------------------------------------------*/
+/*     			Main Page					*/
+/*------------------------------------------*/
+#main_page{
+	max-width: 1300px;
+	min-height: 35em;
+	margin: 0em auto;
+}
+
+/*------------------------------------------*/
+/*     			 	Section 				*/
+/*------------------------------------------*/
+
+#login_logout{
+	background: -webkit-linear-gradient(45deg, #90ffe3, #d0ffc7);
+	width: 32.5em;
+	height: 24em;
+	text-align: center;
+	position: relative;
+	margin: 4em auto;
+	transform-origin: 0% 0%;
+	border-radius: 1em;
+	box-shadow: 3px 3px 3px black;
+	animation: corner_rotate 2s ease-in-out;
+}
+#box_corner{
+	width: 15em;
+	position: absolute;
+	transform: rotate(90deg);
+	top: -1.4em;
+	left: -.5em;
+}
+#registration_section_wrapper{
+	position : relative;
+}
+
+#sign_in_section{
+	position: absolute;
+	top: 0em;
+	height: 18em;
+	transform: rotateY(180deg);
+	display: none;
+}
+.registration_section{
+	margin: 0em auto;
+	min-height: 18em;
+	padding: 3em 2em 2em 2em;
+	border-radius: 1em;
+	border-bottom-right-radius: 8em;
+}
+
+
+.registration_section ul li{
+	list-style-type: none;
+	width: 13em;
+	margin: 0em auto;
+	font-size: 2em;
+	background: white;
+	margin: .5em;
+	padding: .1em;
+	border-radius: .2em;
+}
+
+.ll_input{
+	width: 87%;
+	font-weight: bold;
+	font-size: .8em;
+	border: none;
+	padding: .2em;
+	background: none;
+	outline: none;
+}
+::-webkit-input-placeholder{
+	background: white;
+}
+::placeholder{
+	background: white;
+}
+
+#login_btn{
+	font-size: 2em;
+	font-weight: bold;
+	padding: .1em 1em;
+	border: none;
+	background: -webkit-linear-gradient(45deg, #85a5e0, #f1bbff);
+	border-radius: .3em;
+	box-shadow: 3px 3px 10px #2b2a2a; 
+	outline: none;
+	cursor: pointer;
+}
+#note{
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: .5em;
+	font-family: tahoma;
+}
+
+.registration_director{
+	color: #4039e6;
+	cursor: pointer;
+}
+
+.label{
+	font-size: 2.2em;
+	border-bottom: 3px solid #8c8484
+}
+
+/*------------------------------------------*/
+/*     			Animation					*/
+/*------------------------------------------*/
+
+@keyframes lessthan{
+	0%{top: -10em; left : -4em; transform : rotate(100deg)}
+	10%{ left : -4em; top : -2em}
+	20%{left : -4em; top: -6em}
+	30%{left : -4em; top : -2em}
+	40%{left : -4em; top : -3em}
+	45%{left : -4em; top: -2em}
+	100%{left : 3em; top: -2em; transform : rotate(0deg)}
+}
+@keyframes greaterthan{
+	0%{top: -10em; left : 2em; transform : rotate(40deg)}
+	10%{ left : 2em; top : -2em}
+	20%{left : 2em; top: -6em}
+	30%{left : 2em; top : -2em}
+	40%{left : 2em; top : -3em}
+	45%{left : 2em; top: -2em}
+	100%{left : -2.5em; top: -2em; transform : rotate(0deg)}
+}
+@keyframes code{
+	0%{top: -10em; transform: rotate(-90deg); left: -4em}
+	10%{top: 2em; left : -4em; transform : rotate(-90deg)}
+	100%{transform : rotate(0deg); top: -3em; left : -1.5em}
+	
+}
+@keyframes share{
+	0%{top: -20em; transform: rotate(60deg); left: -4em}
+	10%{top: -3em; left : -4em; transform : rotate(80deg)}
+	100%{transform : rotate(0deg); top: -3em; left : -1.5em}
+}
+
+@keyframes corner_rotate{
+	0%{transform :  rotate(-50deg)}
+	25%{transform : rotate(45deg)}
+	50%{transform : rotate(-20deg)}
+	75%{transform : rotate(5deg)}
+	100%{transform : rotate(0deg)}
+}
+
+@keyframes shake{
+	0%{transform : rotate(0deg)}
+	40%{transform : rotate(30deg)}
+	80%{transform : rotate(-10deg)}
+	100%{transform : rotate(0deg) }
+}
