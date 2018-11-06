@@ -57,7 +57,7 @@ body
 /*     			Main Page					*/
 /*------------------------------------------*/
 #main_page{
-	max-width: 1300px;
+	max-width: 1500px;
 	min-height: 35em;
 	margin: 0em auto;
 }
@@ -160,6 +160,405 @@ body
 	border-bottom: 3px solid #8c8484
 }
 
+
+
+/*------------------------------------------*/
+/*     				Editor					*/
+/*------------------------------------------*/
+#editor_wrapper{
+}
+#u_editor_wrapper{
+	min-width: 30%;
+	max-width:70%;
+	width: 52%;
+	float: left;
+	position: relative;
+}
+
+#dragbar{
+	width: 2px;
+	height: 100%;
+	float: right;
+	background-color:#595b5d;
+	cursor: col-resize;	
+	position: absolute;
+	right: 0em;
+	top: 0em;
+}
+#f_editor_wrapper{
+	width: 48%;
+	min-width: 30%;
+	max-width:70%;
+	float: right;
+}
+
+.editor{
+	height: 42em;
+	width: 85%;
+	margin: 1em auto;
+	background: #292929;
+	animation : increase_height 1s ease-in-out;
+	position: relative;
+	padding: .5em 0em;
+	overflow: hidden;
+}
+#editor_tab_wrapper{
+	margin-top: 1em;
+	width: 100%;
+	overflow-x : scroll;
+}
+#editor_tab_wrapper::-webkit-scrollbar {
+    height: .4em;
+}
+ 
+#editor_tab_wrapper::-webkit-scrollbar-track {
+    background: #3a3a3a;
+}
+ 
+#editor_tab_wrapper::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+}
+#tab_list{
+	min-width: 15em;
+}
+.tab{
+	font-size: 1.1em;
+	background: black;
+	width: 6em;
+	margin: 0em 0em;
+	padding: .2em .2em;
+	color: white;
+	border-top-right-radius: .5em;
+	border-top-left-radius: .5em;
+	font-family: tahoma;
+	display: inline-grid;
+	text-align: center;
+	cursor: pointer;
+}
+#editor_header{
+	height: 1.5em;
+	line-height: 1.5em;
+	padding: 0em .5em;
+	background: #b3b1b1;
+	min-width: 6.5em;
+	margin: .5em 0em;
+	border-top-right-radius: .5em;
+	border-bottom-right-radius: .5em;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #000000;
+	font-family: tahoma;
+}
+.user_space{
+	font-size: 2em;
+	font-weight: bold;
+	font-family: tahoma;
+	margin: .3em 0em;
+	width: 85%;
+	height: 1.3em;
+	background: -webkit-linear-gradient(45deg, #b7b7b7, #231f1f);
+	color: white;
+	border: .1em solid #292929;
+	background: -webkit-linear-gradient(45deg, #7893e0, #d1f9dc);
+	border-radius: .3em;
+	overflow: hidden;
+}
+
+#text_area_wrapper{
+	background: black;
+	text-align: center;
+	position: relative;
+	min-height: 37.3em;
+}
+
+#text_area{
+	resize: none;
+	background-color: #000000;
+	width: 90%;
+	height: 31.5em;
+	color: white;
+	padding: .5em;
+	outline: none;
+	border: none;
+	font-size: 1.4em;
+	display: none;
+}
+#text_area::placeholder{
+	background: black;
+}
+
+#mid{
+	border: 3px dashed silver;
+	margin: 0em auto;
+	width: 80%;
+	max-width: 30em;
+	position: relative;
+	top: 4em;
+	padding: 3em 0em;
+	border-radius: 1.5em;
+	color: white;
+}
+
+.file_type{
+	display: inline-grid;
+	width: 30%;
+	min-width: 7em;
+	position: relative;
+	height: 9em;
+	margin: 0em .5em;
+	cursor: pointer;
+	overflow: hidden;
+}
+#file_type_icon{
+	font-size: 6em;
+	color: #545454;
+}
+
+#file_type_label{
+	font-family: tahoma;
+	color: #545454;
+	font-weight: bold;
+	position: relative;
+	top: -1em;
+}
+#file_code{
+	position: absolute;
+	font-size: 7em;
+	opacity: 0;
+	cursor: pointer;
+}
+
+#connection_form_wrapper{
+}
+#f_id{
+	background: #000000;
+	outline: none;
+	font-size: 2em;
+	width: 80%;
+	border: 1px solid white;
+	border-right: none;
+	padding: .1em;
+	border-top-left-radius: .2em;
+	border-bottom-left-radius: .2em;
+	color: white;
+}
+#f_id::placeholder{
+	background: #000000;
+}
+#connect_btn{
+	background: #d4d4d4;
+	font-size: 2em;
+	border: 1px solid white;
+	padding: .1em;
+	border-top-right-radius: .2em;
+	border-bottom-right-radius: .2em;
+	outline: none;
+	cursor:pointer;
+}
+
+#request_wrapper{
+	margin: .5em 0.5em;
+	padding: .3em .8em;
+}
+#request_wrapper h3{
+	font-family: tahoma;
+	text-align: left;
+	color: #a978ff;
+}
+
+#connection_status{
+	width: 80%;
+	margin: 1em auto;
+	text-align: center;
+	font-family: tahoma;
+	font-size: 2em;
+}
+#connection_status span{
+	opacity: 0;
+}
+
+#conn_status_gif{
+	width: 100%;
+	max-width: 80%;
+}
+/*
+.keyword{
+	color: #719ffd;
+}
+.bracket{
+	color: white;
+}
+.parameter{
+	color: #d0b92e;
+}
+
+.hidden_underscore{
+	color: black;
+}
+
+.function{
+	color: #75f376;
+}
+
+#w{
+	animation : status 7.2s infinite ;
+	animation-delay: 7s;
+}
+#wh{
+	animation : status 7s  ;
+	animation-delay : 7.2s;
+}
+#whi{
+	animation : status 6.8s  ;
+	animation-delay : 7.4s;
+}
+#whil{
+	animation : status 6.6s  ;
+	animation-delay : 7.6s;
+}
+#while{
+	animation : status 6.4s  ;
+	animation-delay : 7.8s;
+}
+
+#firstopenbrace{
+	animation : status 6.2s  ;
+	animation-delay : 8s;
+}
+
+#c{
+	animation : status 6s  ;
+	animation-delay : 8.2s;
+}
+#co{
+	animation : status 5.8s  ;
+	animation-delay : 8.4s;
+}
+#con{
+	animation : status 5.6s  ;
+	animation-delay : 8.6s;
+}
+#conn{
+	animation : status 5.4s  ;
+	animation-delay : 8.8s;
+}
+#conne{
+	animation : status 5.2s  ;
+	animation-delay : 9s;
+}
+#connec{
+	animation : status 5s  ;
+	animation-delay : 9.2s;
+}
+#connect{
+	animation : status 4.8s  ;
+	animation-delay : 9.4s;
+}
+#connecti{
+	animation : status 4.6s  ;
+	animation-delay : 9.6s;
+}
+#connectin{
+	animation : status 4.4s  ;
+	animation-delay : 9.8s;
+}
+#connecting{
+	animation : status 4.2s  ;
+	animation-delay : 10s;
+}
+#firstclosebrace{
+	animation : status 4s   ;
+	animation-delay : 10.2s;
+}
+#firstopencurlybrace{
+	animation : status 3.8s  ;
+	animation-delay : 10.4s;
+}
+#ft{
+	animation : status 3.6s ;
+	animation-delay : 10.6s;
+}
+
+#fa{
+	animation : status 3.4s  ;
+	animation-delay : 10.8s;
+}
+
+#fk{
+	animation : status 3.2s  ;
+	animation-delay : 11s;
+}
+
+#fe {
+	animation : status 3s  ;
+	animation-delay : 11.2s;
+}
+#secondopenbrace{
+	animation : status 2.8s  ;
+	animation-delay : 11.4s;
+}
+#C{
+	animation : status 2.6s  ;
+	animation-delay : 11.6s;
+}
+
+#Ch{
+	animation : status 2.4s  ;
+	animation-delay : 11.8s;
+}
+
+#Chi{
+	animation : status 2.2s  ;
+	animation-delay : 12s;
+}
+
+#Chil{
+	animation : status 2s  ;
+	animation-delay : 12.2s;
+}
+
+#Chill{
+	animation : status 1.8s  ;
+	animation-delay : 12.4s;
+}
+
+#P{
+	animation : status 1.6s  ;
+	animation-delay : 12.6s;
+}
+
+#Pi{
+	animation : status 1.4s  ;
+	animation-delay : 12.8s;
+}
+#Pil{
+	animation : status 1.2s  ;
+	animation-delay : 13s;
+}
+#Pill{
+	animation : status 1s  ;
+	animation-delay : 13.2s;
+}
+#secondclosebrace{
+	animation : status .8s  ;
+	animation-delay : 13.4s;
+}
+#semicolon{
+	animation : status .6s  infinite;
+	animation-delay : 13.6s;
+}
+
+#firstclosecurlybrace{
+	animation : status .4s  ;
+	animation-delay : 13.8s;
+}
+*/
+
+
+
+
+
+
 /*------------------------------------------*/
 /*     			Animation					*/
 /*------------------------------------------*/
@@ -207,4 +606,14 @@ body
 	40%{transform : rotate(30deg)}
 	80%{transform : rotate(-10deg)}
 	100%{transform : rotate(0deg) }
+}
+
+@keyframes increase_height{
+	from{height: 0em}
+	to{height: 42em}
+}
+@keyframes status{
+	0%{opacity : 0}
+	10%{opacity: 1}
+	100%{opacity: 1}
 }
